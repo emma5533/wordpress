@@ -3,7 +3,18 @@
 Theme Name: loeve_childtheme
 Template: twentynineteen
 Author: Emma Bachmann og Camilla Damgaard
-Version: 1.0.0
-hejsa
-hej
+Version: 1.0.3
+
 */
+
+/*Typografier*/
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+h1 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: light;
+    color:  black;
+}
+
+p{
+    font-family: 'Outfit', sans-serif;
+}
