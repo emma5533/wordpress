@@ -3,13 +3,17 @@
 Theme Name: loeve_childtheme
 Template: twentynineteen
 Author: Emma Bachmann og Camilla Damgaard
-Version: 1.0.3
+Version: 1.0.4
 
 */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: beige; /*bare rolig, havde bare ikke farvekoden*/
 }
 
 /*Typografier*/
