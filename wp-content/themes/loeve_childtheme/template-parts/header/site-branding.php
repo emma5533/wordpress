@@ -27,10 +27,10 @@
 		?>
 			<p class="site-description">
 				<?php echo $description; ?>
-			</p>
+			 </p> 
 	<?php endif; ?>
 	<?php if ( has_nav_menu( 'menu-1' ) ) : ?>
-		<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Top Menu', 'twentynineteen' ); ?>">
+		<nav id="site-navigation" class="main-navigation">
 			<?php
 			wp_nav_menu(
 				array(
