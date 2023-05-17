@@ -21,53 +21,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-<style>
-	/*STYLING AF HEADER*/
-	/*navigation placeres i kolonne, og styles*/
-	.main-navigation .main-menu {
-  display: flex;
-  gap: 0.4rem;
-  margin: 0;
-  padding: 0;
-  flex-direction: column;
-  font-family: "Outfit", sans-serif;
-  	font-weight: light;
-	font-size: 0.7rem;
-}
-#menu-navigation li a{
-	color: black !important;
-}
-#menu-navigation li a:hover{
-	color: orange !important;
-}
 
 
-/*placering af headerens elementer i grid*/
-.site-branding {
-	display: grid;
-	grid-template-columns: 20px repeat(3, 1fr) 20px;
-}
-.site-logo{
-	grid-column: 2/5;
-	grid-row: 1/2;
-	display: flex;
-	justify-content: center;
-}
-.main-navigation{
-	grid-column: 2/3;	
-	grid-row: 2/3;
-}
-
-
-/*media query????*/
-@media(min-width:700px){
-	.site-logo{
-		display: flex;
-		justify-content: center;
-	}
-}
-
-</style>
 
 </head>
 
