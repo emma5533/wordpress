@@ -3,20 +3,20 @@
 Theme Name: loeve_childtheme
 Template: twentynineteen
 Author: Emma Bachmann og Camilla Damgaard
-Version: 1.0.4
+Version: 1.0.5
 
 */
+/*OVERORDNEDE REGLER*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   background-color: beige; /*bare rolig, havde bare ikke farvekoden*/
 }
 
-/*Typografier*/
+/*TYPOGRAFIER*/
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 h1 {
@@ -27,4 +27,34 @@ h1 {
 
 p {
   font-family: "Outfit", sans-serif;
+}
+
+/*STYLING AF HEADER*/
+/*navigation placeres i kolonne, og styles*/
+.main-navigation .main-menu {
+  display: flex;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  font-family: "Outfit", sans-serif;
+  font-weight: light;
+  font-size: 0.7rem;
+}
+#menu-navigation li a {
+  color: black !important;
+}
+#menu-navigation li a:hover {
+  color: orange !important;
+}
+
+/*placering af headerens elementer i grid*/
+
+#masthead .site-branding-container {
+  display: grid;
+  grid-template-columns: 20px repeat(3, 1fr) 20px;
+}
+
+#masthead .site-branding-container .site-branding {
+  grid-column: 2/5;
 }
