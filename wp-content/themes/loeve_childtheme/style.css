@@ -15,21 +15,60 @@ Version: 1.0.5
 body {
   background-color: beige; /*bare rolig, havde bare ikke farvekoden*/
 }
+#main {
+  display: grid;
+  grid-template-columns: 1fr minmax(200px, 1000px) 1fr;
+}
+#main article:not(#main #post-8 .frontpage .bred) {
+  grid-column: 2/3;
+}
 
 /*TYPOGRAFIER*/
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 h1 {
   font-family: "Outfit", sans-serif;
-  font-weight: light;
+  font-weight: 600;
   color: black;
+}
+
+h2 {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0 0 0.3rem 0;
+}
+h3 {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin: 0 0 0.3rem 0;
+}
+
+/*fjerner parents themes streg over h1 og h2*/
+h1:not(.site-title):before,
+h2:before {
+  display: none;
 }
 
 p {
   font-family: "Outfit", sans-serif;
 }
 
+.site-footer #footer-menu {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 300;
+}
+
 /*STYLING AF HEADER*/
+.site-header {
+  padding: 1rem 0 1rem 0;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
 /*navigation placeres i kolonne, og styles*/
 .main-navigation .main-menu {
   display: flex;
@@ -52,9 +91,124 @@ p {
 
 #masthead .site-branding-container {
   display: grid;
-  grid-template-columns: 20px repeat(3, 1fr) 20px;
 }
 
 #masthead .site-branding-container .site-branding {
+  display: grid;
+  grid-template-columns: 20px repeat(3, 1fr) 20px;
+  margin: 0;
+}
+.site-logo {
+  grid-column: 3/4;
+  position: static;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body.page .main-navigation {
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+@media only screen and (min-width: 768px) {
+  .site-logo {
+    margin-right: auto;
+    margin-left: auto;
+    position: static;
+  }
+}
+
+/*STYLING AF FORSIDENS INDHOLD*/
+/*Styling til mobil*/
+.frontpage {
+  padding-inline: 3rem;
+}
+.frontpage h3 {
+  margin-top: -0.5rem;
+}
+.frontpage div.icon-container:hover {
+  color: orange;
+  cursor: pointer;
+}
+.frontpage .wp-block-image {
+  padding: 0;
+}
+@media (min-width: 782px) {
+  .immortelle,
+  .olie,
+  .manuka {
+    display: grid;
+  }
+  h3 {
+    margin: 0;
+  }
+}
+
+/*STYLING OG OPSÆTNING AF FOOTER*/
+#colophon {
+  display: grid;
+  grid-template-columns: 1rem repeat(3, 1fr) 1rem;
+  grid-template-rows: auto auto 2.5rem;
+  margin: 0 0 1rem 0;
+}
+.site-footer #footer-menu {
+  list-style: none;
+  font-size: 0.7rem;
+  padding: 0;
+  grid-column: 2/3;
+}
+.site-footer #footer-menu li a {
+  color: black;
+}
+#colophon #footer-menu li:hover {
+  color: orange;
+  cursor: pointer;
+}
+.site-footer #footer-menu li a:hover {
+  color: orange;
+}
+/*Styling af nyhedsbrev-knap*/
+#colophon #footer-knap {
+  background-color: transparent;
+  border: solid 0.05rem black;
+  border-radius: 1rem;
+  color: black;
+  font-family: "Outfit", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 300;
+  padding: 0.4rem;
   grid-column: 2/5;
+  margin: 0.5rem 1rem 0 1rem;
+}
+#colophon #footer-knap:hover {
+  border: solid 0.05rem orange;
+  color: orange;
+}
+/*placering af email og styling af placeholder*/
+#footer-email {
+  grid-column: 2/5;
+  text-align: center;
+  font-size: 0.7rem;
+}
+#footer-email input {
+  background-color: transparent;
+  border: solid 0.05rem black;
+  border-radius: 1rem;
+  color: black;
+}
+#footer-email input::placeholder {
+  font-family: "Outfit", sans-serif;
+  font-weight: 300;
+}
+/*mediaquery, som gør footeren responsiv*/
+@media only screen and (min-width: 768px) {
+  .site-footer #footer-menu {
+    display: flex;
+    grid-column: 2/5;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  #colophon #footer-knap {
+    grid-column: 3/4;
+  }
 }

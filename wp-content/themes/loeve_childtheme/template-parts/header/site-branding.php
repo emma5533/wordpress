@@ -8,10 +8,10 @@
  */
 ?>
 <div class="site-branding">
-
-	<?php if ( has_custom_logo() ) : ?>
+<div class="site-logo"><img src="https://emmaiguldbergsgade.dk/4sem_eksamen/lb_logo.png" alt=""> </div>
+	<!-- <?php if ( has_custom_logo() ) : ?>
 		<div class="site-logo"><?php the_custom_logo(); ?></div>
-	<?php endif; ?>
+	<?php endif; ?> -->
 	<?php $blog_info = get_bloginfo( 'name' ); ?>
 	<?php if ( ! empty( $blog_info ) ) : ?>
 		<?php if ( is_front_page() && is_home() ) : ?>
@@ -41,6 +41,7 @@
 			?>
 		</nav><!-- #site-navigation -->
 	<?php endif; ?>
+	
 	<?php if ( has_nav_menu( 'social' ) ) : ?>
 		<nav class="social-navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'twentynineteen' ); ?>">
 			<?php
