@@ -3,7 +3,7 @@
 Theme Name: loeve_childtheme
 Template: twentynineteen
 Author: Emma Bachmann og Camilla Damgaard
-Version: 1.0.8
+Version: 1.1.0
 
 */
 /*OVERORDNEDE REGLER*/
@@ -17,7 +17,7 @@ body {
 }
 main {
   display: grid;
-  grid-template-columns: 1fr minmax(200px, 1100px) 1fr;
+  grid-template-columns: 1fr minmax(200px, 1000px) 1fr;
 }
 main article:not(#main #post-8 .frontpage .bred) {
   grid-column: 2/3;
@@ -30,13 +30,13 @@ h1 {
   font-family: "Outfit", sans-serif;
   font-weight: 600;
   color: black;
-  font-size: 1.8rem;
-  margin: 2rem 0.5rem 0.5rem 0.5rem;
+  font-size: 1.5rem;
+  margin: 4rem 0.5rem 2rem 0.5rem;
 }
 
 h2 {
   font-family: "Outfit", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 500;
   margin: 0 0 0.3rem 0;
 }
@@ -179,18 +179,30 @@ body.page .main-navigation {
     margin: 0;
   }
 }
-
+@media only screen and (min-width: 768px) {
+  .entry .entry-content,
+  .entry .entry-summary {
+    max-width: 100%;
+    margin: 0;
+    padding: 0 60px;
+  }
+}
 /*STYLING AF PRODUKTSIDE*/
 #produktside > h1 {
   grid-column: 2/3;
   text-align: center;
 }
+
 #produktside > h1::before {
   display: none;
 }
 
 #allproducts {
-  margin-inline: 2rem;
+  margin-inline: 3rem;
+}
+
+.pris {
+  margin-block: 0.3rem;
 }
 
 hr {
@@ -198,14 +210,14 @@ hr {
   position: relative;
   width: 100vw;
   height: 20px;
-  margin: 3rem 0 5rem -50vw;
+  margin: 0.5rem 0 2.5rem -50vw;
   left: 50%;
   border: none;
   background-color: transparent;
   background-image: url(https://emmaiguldbergsgade.dk/4sem_eksamen/ingrediens_hr.svg);
   left: 700px;
   position: relative;
-  animation: alternate-reverse hr 10s infinite;
+  animation: alternate-reverse hr 12s infinite;
   animation-timing-function: linear;
 }
 @keyframes hr {
@@ -216,10 +228,12 @@ hr {
     right: -1500px;
   }
 }
-@media (min-width: 500px) {
+/*mediaquery styling for produktside*/
+@media (min-width: 700px) {
   hr {
+    margin-block: 0 2.5rem;
     left: 2000px;
-    animation-duration: 20s;
+    animation-duration: 15s;
   }
   @keyframes hr {
     from {
@@ -228,6 +242,28 @@ hr {
     to {
       right: -2000px;
     }
+  }
+
+  #allproducts {
+    margin-inline: 0;
+  }
+
+  .produkt_loop {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 400px));
+    gap: 1rem;
+    grid-template-rows: repeat(4, auto);
+    justify-content: center;
+  }
+  .produkt_loop img {
+    grid-row: 1/5;
+    width: 75%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .produkt_loop .indeholder {
+    grid-column: 1/3;
+    text-align: center;
   }
 }
 

@@ -27,7 +27,7 @@ get_header();
 					<h2></h2>
 					<p class="bsk"></p>
 					<p class="pris"></p>
-					<p class="ingrediensliste"></p>
+					<h3 class="indeholder"></h3>
 					<hr>
 				</article>
 				
@@ -56,7 +56,7 @@ get_header();
 						clone.querySelector("img").src = produkt.produktbillede.guid;
 						clone.querySelector(".bsk").textContent = produkt.produktbsk;
 						clone.querySelector(".pris").textContent = produkt.pris + "kr.";
-						clone.querySelector(".ingrediensliste").textContent = produkt.igliste;
+						clone.querySelector(".indeholder").textContent = produkt.title.rendered + " indeholder:";
 					
 					produktLoop.appendChild(clone);
 				})
