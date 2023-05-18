@@ -13,7 +13,7 @@ get_header();
 ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+		<main id="produktside" class="site-main">
 			<h1>alle vores produkter</h1>
 			<article id="allproducts"></article>
 
@@ -28,7 +28,9 @@ get_header();
 					<p class="bsk"></p>
 					<p class="pris"></p>
 					<p class="ingrediensliste"></p>
+					<hr>
 				</article>
+				
 			</template>
 
 

@@ -3,7 +3,7 @@
 Theme Name: loeve_childtheme
 Template: twentynineteen
 Author: Emma Bachmann og Camilla Damgaard
-Version: 1.0.6
+Version: 1.0.8
 
 */
 /*OVERORDNEDE REGLER*/
@@ -15,11 +15,11 @@ Version: 1.0.6
 body {
   background-color: beige; /*bare rolig, havde bare ikke farvekoden*/
 }
-#main {
+main {
   display: grid;
   grid-template-columns: 1fr minmax(200px, 1100px) 1fr;
 }
-#main article:not(#main #post-8 .frontpage .bred) {
+main article:not(#main #post-8 .frontpage .bred) {
   grid-column: 2/3;
 }
 
@@ -30,6 +30,8 @@ h1 {
   font-family: "Outfit", sans-serif;
   font-weight: 600;
   color: black;
+  font-size: 1.8rem;
+  margin: 2rem 0.5rem 0.5rem 0.5rem;
 }
 
 h2 {
@@ -43,6 +45,13 @@ h3 {
   font-size: 0.8rem;
   font-weight: 400;
   margin: 0 0 0.3rem 0;
+}
+
+p {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 300;
+  line-height: 0.9rem;
 }
 
 /*fjerner parents themes streg over h1 og h2*/
@@ -123,7 +132,7 @@ body.page .main-navigation {
 /*STYLING AF FORSIDENS INDHOLD*/
 /*Styling til mobil*/
 .frontpage {
-  padding-inline: 3rem;
+  padding-inline: 2rem;
 }
 .frontpage h3 {
   margin-top: -0.5rem;
@@ -168,6 +177,57 @@ body.page .main-navigation {
   }
   h3 {
     margin: 0;
+  }
+}
+
+/*STYLING AF PRODUKTSIDE*/
+#produktside > h1 {
+  grid-column: 2/3;
+  text-align: center;
+}
+#produktside > h1::before {
+  display: none;
+}
+
+#allproducts {
+  margin-inline: 2rem;
+}
+
+hr {
+  display: block;
+  position: relative;
+  width: 100vw;
+  height: 20px;
+  margin: 3rem 0 5rem -50vw;
+  left: 50%;
+  border: none;
+  background-color: transparent;
+  background-image: url(https://emmaiguldbergsgade.dk/4sem_eksamen/ingrediens_hr.svg);
+  left: 700px;
+  position: relative;
+  animation: alternate-reverse hr 10s infinite;
+  animation-timing-function: linear;
+}
+@keyframes hr {
+  from {
+    left: -300px;
+  }
+  to {
+    right: -1500px;
+  }
+}
+@media (min-width: 500px) {
+  hr {
+    left: 2000px;
+    animation-duration: 20s;
+  }
+  @keyframes hr {
+    from {
+      left: -1000px;
+    }
+    to {
+      right: -2000px;
+    }
   }
 }
 
