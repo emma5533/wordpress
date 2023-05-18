@@ -3,7 +3,7 @@
 Theme Name: loeve_childtheme
 Template: twentynineteen
 Author: Emma Bachmann og Camilla Damgaard
-Version: 1.0.5
+Version: 1.0.6
 
 */
 /*OVERORDNEDE REGLER*/
@@ -17,7 +17,7 @@ body {
 }
 #main {
   display: grid;
-  grid-template-columns: 1fr minmax(200px, 1000px) 1fr;
+  grid-template-columns: 1fr minmax(200px, 1100px) 1fr;
 }
 #main article:not(#main #post-8 .frontpage .bred) {
   grid-column: 2/3;
@@ -46,8 +46,11 @@ h3 {
 }
 
 /*fjerner parents themes streg over h1 og h2*/
-h1:not(.site-title):before,
+h1:before,
 h2:before {
+  display: none;
+}
+.entry .entry-title::before {
   display: none;
 }
 
@@ -129,9 +132,34 @@ body.page .main-navigation {
   color: orange;
   cursor: pointer;
 }
+/*styling af udforsk knap*/
+#post-8
+  > div
+  > div.wp-block-buttons.alignwide.is-content-justification-center.is-layout-flex.wp-container-7
+  > div
+  > a {
+  border: black 0.05rem solid;
+  border-radius: 3rem;
+  color: black;
+  font-family: "Outfit", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 300;
+  padding: 0.4rem 2rem 0.4rem 2rem;
+}
+#post-8
+  > div
+  > div.wp-block-buttons.alignwide.is-content-justification-center.is-layout-flex.wp-container-7
+  > div
+  > a:hover {
+  border: orange 0.05rem solid;
+  color: orange;
+}
+
+/*bredt billede, mislykket styling :(*/
 .frontpage .wp-block-image {
   padding: 0;
 }
+/*mediaquery for forsiden*/
 @media (min-width: 782px) {
   .immortelle,
   .olie,
