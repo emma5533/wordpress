@@ -27,9 +27,9 @@ get_header();
 					<h2></h2>
 					<p class="bsk"></p>
 					<p class="pris"></p>
-					<button id="produktknap" type="button" > læg i kurv</button>
+					<button id="produktknap" type="button" >læg i kurv</button>
 					<h3 class="indeholder"></h3>
-					<hr>
+					<hr id="produkt_hr">
 				</article>
 				
 			</template>

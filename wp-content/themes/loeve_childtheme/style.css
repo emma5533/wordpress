@@ -3,7 +3,7 @@
 Theme Name: loeve_childtheme
 Template: twentynineteen
 Author: Emma Bachmann og Camilla Damgaard
-Version: 1.1.4
+Version: 1.1.7
 
 */
 /*OVERORDNEDE REGLER*/
@@ -212,7 +212,7 @@ body.page .main-navigation {
 }
 
 #allproducts {
-  margin-inline: 3rem;
+  margin-inline: 5rem;
 }
 
 .pris {
@@ -240,7 +240,7 @@ body.page .main-navigation {
   padding: 0.4rem;
 }
 
-hr {
+#produkt_hr {
   display: block;
   width: 100vw;
   height: 20px;
@@ -251,10 +251,10 @@ hr {
   background-image: url(https://emmaiguldbergsgade.dk/4sem_eksamen/ingrediens_hr.svg);
   left: 700px;
   position: relative;
-  animation: alternate-reverse hr 12s infinite;
+  animation: alternate-reverse produkt_hr 12s infinite;
   animation-timing-function: linear;
 }
-@keyframes hr {
+@keyframes produkt_hr {
   from {
     left: -300px;
   }
@@ -264,12 +264,12 @@ hr {
 }
 /*mediaquery styling for produktside*/
 @media (min-width: 700px) {
-  hr {
+  #produkt_hr {
     margin-block: 0 2.5rem;
     left: 2000px;
-    animation-duration: 17s;
+    animation-duration: 20s;
   }
-  @keyframes hr {
+  @keyframes produkt_hr {
     from {
       left: -1000px;
     }
@@ -285,7 +285,7 @@ hr {
   .produkt_loop {
     display: grid;
     grid-template-columns: repeat(2, minmax(200px, 400px));
-    gap: 1rem;
+    gap: 0.5rem;
     grid-template-rows: repeat(4, auto);
     justify-content: center;
   }
@@ -321,6 +321,77 @@ hr {
   }
   #allingredients {
     margin-inline: 0;
+  }
+}
+
+/*STYLING OG OPSÆTNING AF EVENTSIDE*/
+#eventside > h1 {
+  grid-column: 2/3;
+  text-align: center;
+}
+
+#allevents {
+  margin: 0 3rem 2rem 5rem;
+}
+/*arrangerer dato og måned sammen i mobil*/
+.event_loop .event_dato {
+  display: grid;
+  grid-template-columns: 28px 28px;
+  margin-bottom: 0.5rem;
+}
+
+.event_loop #eventknap {
+  background-color: transparent;
+  border: solid 0.05rem black;
+  border-radius: 2rem;
+  color: black;
+  font-family: "Outfit", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 300;
+  padding: 0.4rem 1rem;
+  margin: 0.5rem 0;
+}
+.event_loop #eventknap:hover {
+  background-color: transparent;
+  border: solid 0.05rem orange;
+  color: orange;
+}
+
+#event_hr {
+  background-color: black;
+  border: 0;
+  height: 0.05rem;
+  margin-block: 0.5rem 2rem;
+}
+
+/*placerer i grid til tablet og web*/
+@media (min-width: 900px) {
+  .event_loop {
+    display: grid;
+    grid-template-columns: 50px 400px 1fr;
+    grid-template-rows: repeat(3, auto);
+    gap: 0.5rem;
+  }
+  .event_loop .event_dato {
+    display: grid;
+    grid-template-rows: 28px 28px;
+    grid-template-columns: 0;
+    margin-bottom: 0;
+  }
+  .event_loop img {
+    grid-row: 1/3;
+    grid-column: 2/3;
+  }
+  .event_loop p {
+    grid-row: 2/3;
+    grid-column: 3/4;
+  }
+  .event_loop #eventknap {
+    grid-row: 3/4;
+    grid-column: 3/4;
+  }
+  #event_hr {
+    grid-column: 1/4;
   }
 }
 
