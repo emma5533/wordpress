@@ -3,7 +3,7 @@
 Theme Name: loeve_childtheme
 Template: twentynineteen
 Author: Emma Bachmann og Camilla Damgaard
-Version: 1.1.0
+Version: 1.1.4
 
 */
 /*OVERORDNEDE REGLER*/
@@ -60,6 +60,10 @@ h2:before {
   display: none;
 }
 .entry .entry-title::before {
+  display: none;
+}
+h1:not(.site-title):before,
+h2:before {
   display: none;
 }
 
@@ -186,7 +190,17 @@ body.page .main-navigation {
     margin: 0;
     padding: 0 60px;
   }
+  .entry .entry-content > *,
+  .entry .entry-content .wp-block-image:not(.alignwide):not(.alignfull) > img {
+    max-width: 100%;
+  }
 }
+@media only screen and (min-width: 1168px) {
+  .entry .entry-content .wp-block-image:not(.alignwide):not(.alignfull) > img {
+    max-width: 100%;
+  }
+}
+
 /*STYLING AF PRODUKTSIDE*/
 #produktside > h1 {
   grid-column: 2/3;
@@ -205,13 +219,33 @@ body.page .main-navigation {
   margin-block: 0.3rem;
 }
 
+.produkt_loop #produktknap {
+  background-color: transparent;
+  border: solid 0.05rem black;
+  border-radius: 2rem;
+  color: black;
+  font-family: "Outfit", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 300;
+  padding: 0.4rem;
+}
+.produkt_loop #produktknap:hover {
+  background-color: transparent;
+  border: solid 0.05rem orange;
+  border-radius: 2rem;
+  color: orange;
+  font-family: "Outfit", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 300;
+  padding: 0.4rem;
+}
+
 hr {
   display: block;
-  position: relative;
   width: 100vw;
   height: 20px;
   margin: 0.5rem 0 2.5rem -50vw;
-  left: 50%;
+  /* left: 50%; */
   border: none;
   background-color: transparent;
   background-image: url(https://emmaiguldbergsgade.dk/4sem_eksamen/ingrediens_hr.svg);
@@ -233,7 +267,7 @@ hr {
   hr {
     margin-block: 0 2.5rem;
     left: 2000px;
-    animation-duration: 15s;
+    animation-duration: 17s;
   }
   @keyframes hr {
     from {
@@ -264,6 +298,29 @@ hr {
   .produkt_loop .indeholder {
     grid-column: 1/3;
     text-align: center;
+  }
+}
+
+/*STYLING OG OPSÆTNING AF INGREDIENSSIDE*/
+#igside > h1 {
+  grid-column: 2/3;
+  text-align: center;
+}
+
+#allingredients {
+  margin: 0 5rem 2rem 5rem;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+@media (min-width: 700px) {
+  .ingrediens_loop {
+    width: 280px;
+  }
+  #allingredients {
+    margin-inline: 0;
   }
 }
 
