@@ -3,7 +3,7 @@
 Theme Name: loeve_childtheme
 Template: twentynineteen
 Author: Emma Bachmann og Camilla Damgaard
-Version: 1.1.7
+Version: 1.1.8
 
 */
 /*OVERORDNEDE REGLER*/
@@ -313,6 +313,33 @@ body.page .main-navigation {
   flex-flow: wrap;
   justify-content: center;
   gap: 1rem;
+}
+
+/*styling af filtrering på ingrediensside*/
+#igside #filtrering {
+  grid-column: 2/3;
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+  margin: 0.8rem 3rem;
+  gap: 0.5rem;
+}
+#igside #filtrering button {
+  background-color: transparent;
+  border: solid 0.05rem black;
+  border-radius: 2rem;
+  color: black;
+  font-family: "Outfit", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 300;
+  padding: 0.4rem 1rem;
+  margin: 0;
+}
+
+#igside #filtrering button:hover {
+  background-color: transparent;
+  border: solid 0.05rem orange;
+  color: orange;
 }
 
 @media (min-width: 700px) {
