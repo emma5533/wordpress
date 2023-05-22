@@ -27,7 +27,7 @@ get_header();
 			<h2>Helle Thorup</h2>
 			<p>Frederiksgade 1, 2. sal<br>
 				8000 Aarhus<br>
-				hellethorup.dk <br>
+				<a href="https://hellethorup.dk">hellethorup.dk</a> <br>
 				+45 86 18 39 00</p>
 			</article>
 
@@ -36,7 +36,7 @@ get_header();
 			<p>Badstuegade 1E
 				<br>
 				8000 Aarhus<br>
-				raasted.dk <br>
+				<a href="https://raasted.dk">raasted.dk</a> <br>
 				+45 40 78 55 98</p>
 			</article>
 
@@ -45,7 +45,7 @@ get_header();
 			<p>Allegade 24A, 1. sal
 				<br>
 				1850 Frederiksberg<br>
-				beautyavenue.dk <br>
+				<a href="https://www.beautyavenue.dk">beautyavenue.dk</a> <br>
 				+45 33 36 20 90</p>
 			</article>
 
@@ -54,7 +54,7 @@ get_header();
 			<p>Århusgade 88, 4
 				<br>
 				2100 København<br>
-				puresenses.dk <br>
+				<a href="https://www.puresenses.dk">puresenses.dk</a> <br>
 				+45 26 37 20 26</p>
 			</article>
 		
