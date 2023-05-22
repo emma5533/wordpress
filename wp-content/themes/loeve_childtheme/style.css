@@ -3,7 +3,7 @@
 Theme Name: loeve_childtheme
 Template: twentynineteen
 Author: Emma Bachmann og Camilla Damgaard
-Version: 1.1.8
+Version: 1.1.9
 
 */
 /*OVERORDNEDE REGLER*/
@@ -34,7 +34,7 @@ h1 {
   margin: 4rem 0.5rem 2rem 0.5rem;
 }
 
-#post-19 .entry .entry-title {
+#post-19 > header > h1 {
   text-align: center;
 }
 
