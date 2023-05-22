@@ -19,14 +19,13 @@ get_header();
 			<h2>Sjæl Aarhus</h2>
 			<p>Klostergade 26 <br>
 				8000 Aarhus <br>
-				sjael-aarhus.dk <br>
+				<a href="https://sjael-aarhus.dk">sjael-aarhus.dk</a> <br>
 				+45 30 60 90 02</p>
 			</article>
 
 				<article>
 			<h2>Helle Thorup</h2>
-			<p>Frederiksgade 1, 2. sal
-				<br>
+			<p>Frederiksgade 1, 2. sal<br>
 				8000 Aarhus<br>
 				hellethorup.dk <br>
 				+45 86 18 39 00</p>
