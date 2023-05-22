@@ -13,7 +13,7 @@ get_header();
 ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+		<main id="hsside" class="site-main">
 			tester123
             <h1>historien bag</h1>
 			<article>
