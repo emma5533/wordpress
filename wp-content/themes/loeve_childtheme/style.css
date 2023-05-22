@@ -430,6 +430,10 @@ body.page .main-navigation {
   grid-column: 2/3;
   text-align: center;
 }
+#hsside article {
+  margin-inline: 5rem;
+}
+
 /*STYLING OG OPSÆTNING AF FOOTER*/
 #colophon {
   display: grid;
