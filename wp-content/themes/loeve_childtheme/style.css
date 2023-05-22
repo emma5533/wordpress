@@ -124,6 +124,11 @@ p {
   margin-left: auto;
   margin-right: auto;
 }
+#kurv {
+  width: 35px;
+  right: 2vw;
+  position: fixed;
+}
 
 body.page .main-navigation {
   grid-row: 2/3;

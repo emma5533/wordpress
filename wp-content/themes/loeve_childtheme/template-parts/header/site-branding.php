@@ -8,7 +8,8 @@
  */
 ?>
 <div class="site-branding">
-<div class="site-logo"> <a href="https://emmaiguldbergsgade.dk/4sem_eksamen/loevebotanical/"><img src="https://emmaiguldbergsgade.dk/4sem_eksamen/lb_logo.png" alt=""></a> </div>
+<div class="site-logo"> <a href="https://emmaiguldbergsgade.dk/4sem_eksamen/loevebotanical/"><img src="https://emmaiguldbergsgade.dk/4sem_eksamen/lb_logo.png" alt="logo"></a> </div>
+<div id="kurv"><img src="https://emmaiguldbergsgade.dk/4sem_eksamen/cart.png" alt="kurv-ikon"></div>
 	<!-- <?php if ( has_custom_logo() ) : ?>
 		<div class="site-logo"><?php the_custom_logo(); ?></div>
 	<?php endif; ?> -->
