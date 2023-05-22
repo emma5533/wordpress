@@ -457,6 +457,11 @@ body.page .main-navigation {
 
 #fside article p a {
   color: black;
+  text-decoration: underline;
+}
+
+#fside article p a:hover {
+  color: orange;
 }
 
 /*STYLING OG OPSÆTNING AF FOOTER*/
