@@ -455,6 +455,10 @@ body.page .main-navigation {
   margin: 0 5rem 2rem 5rem;
 }
 
+#fside article p a {
+  color: black;
+}
+
 /*STYLING OG OPSÆTNING AF FOOTER*/
 #colophon {
   display: grid;
