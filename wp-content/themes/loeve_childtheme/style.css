@@ -431,7 +431,7 @@ body.page .main-navigation {
   text-align: center;
 }
 #hsside article {
-  margin-inline: 5rem;
+  margin: 0 5rem 2rem 5rem;
 }
 
 @media (min-width: 700px) {
