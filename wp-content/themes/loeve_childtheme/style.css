@@ -434,6 +434,19 @@ body.page .main-navigation {
   margin-inline: 5rem;
 }
 
+@media (min-width: 700px) {
+  #hsside article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    grid-template-rows: auto auto auto;
+  }
+
+  #hsside article img {
+    grid-row: 1/4;
+  }
+}
+
 /*STYLING OG OPSÆTNING AF FOOTER*/
 #colophon {
   display: grid;
