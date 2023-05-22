@@ -446,6 +446,14 @@ body.page .main-navigation {
     grid-row: 1/4;
   }
 }
+/*STYLING AF FORHANDLERE SIDEN*/
+#fside > h1 {
+  grid-column: 2/3;
+  text-align: center;
+}
+#fside article {
+  margin: 0 5rem 2rem 5rem;
+}
 
 /*STYLING OG OPSÆTNING AF FOOTER*/
 #colophon {

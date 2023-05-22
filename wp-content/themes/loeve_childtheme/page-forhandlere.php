@@ -13,7 +13,7 @@ get_header();
 ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+		<main id="fside" class="site-main">
 			<h1>find forhandlere</h1>
 				<article>
 			<h2>Sjæl Aarhus</h2>
