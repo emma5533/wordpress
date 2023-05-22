@@ -14,7 +14,6 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="hsside" class="site-main">
-			tester123
             <h1>historien bag</h1>
 			<article>
 				<img src="https://emmaiguldbergsgade.dk/4sem_eksamen/loeve-116.webp" alt="stine">
