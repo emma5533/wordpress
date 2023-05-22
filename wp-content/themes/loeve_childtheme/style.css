@@ -425,7 +425,11 @@ body.page .main-navigation {
     grid-column: 1/4;
   }
 }
-
+/*STYLING HISTORIEN BAG*/
+#hsside > h1 {
+  grid-column: 2/3;
+  text-align: center;
+}
 /*STYLING OG OPSÆTNING AF FOOTER*/
 #colophon {
   display: grid;
