@@ -3,7 +3,7 @@
 Theme Name: loeve_childtheme
 Template: twentynineteen
 Author: Emma Bachmann og Camilla Damgaard
-Version: 1.1.9
+Version: 1.2.0
 
 */
 /*OVERORDNEDE REGLER*/
@@ -13,7 +13,7 @@ Version: 1.1.9
   box-sizing: border-box;
 }
 body {
-  background-color: beige; /*bare rolig, havde bare ikke farvekoden*/
+  background-color: #f4efe6; /*bare rolig, havde bare ikke farvekoden*/
 }
 main {
   display: grid;
@@ -48,7 +48,7 @@ h3 {
   font-family: "Outfit", sans-serif;
   font-size: 0.8rem;
   font-weight: 400;
-  margin: 0 0 0.3rem 0;
+  margin: 0.3rem 0;
 }
 
 p {
@@ -90,6 +90,12 @@ p {
 }
 
 /*navigation placeres i kolonne, og styles*/
+.main-navigation > div {
+  display: inline;
+  position: absolute;
+  top: 10%;
+}
+
 .main-navigation .main-menu {
   display: flex;
   gap: 0.4rem;
@@ -104,7 +110,7 @@ p {
   color: black !important;
 }
 #menu-navigation li a:hover {
-  color: orange !important;
+  color: #da5e18 !important;
 }
 
 /*placering af headerens elementer i grid*/
@@ -151,7 +157,7 @@ body.page .main-navigation {
   margin-top: -0.5rem;
 }
 .frontpage div.icon-container:hover {
-  color: orange;
+  color: #da5e18;
   cursor: pointer;
 }
 /*styling af udforsk knap*/
@@ -166,15 +172,15 @@ body.page .main-navigation {
   font-family: "Outfit", sans-serif;
   font-size: 0.7rem;
   font-weight: 300;
-  padding: 0.4rem 2rem 0.4rem 2rem;
+  padding: 0.4rem 2rem;
 }
 #post-8
   > div
   > div.wp-block-buttons.alignwide.is-content-justification-center.is-layout-flex.wp-container-7
   > div
   > a:hover {
-  border: orange 0.05rem solid;
-  color: orange;
+  border: #da5e18 0.05rem solid;
+  color: #da5e18;
 }
 
 /*bredt billede, mislykket styling :(*/
@@ -188,7 +194,7 @@ body.page .main-navigation {
   .manuka {
     display: grid;
   }
-  h3 {
+  .frontpage h3 {
     margin: 0;
   }
 }
@@ -228,7 +234,8 @@ body.page .main-navigation {
   margin-block: 0.3rem;
 }
 
-.produkt_loop #produktknap {
+.produkt_loop #produktknap,
+#tabs > button {
   background-color: transparent;
   border: solid 0.05rem black;
   border-radius: 2rem;
@@ -236,17 +243,26 @@ body.page .main-navigation {
   font-family: "Outfit", sans-serif;
   font-size: 0.7rem;
   font-weight: 300;
-  padding: 0.4rem;
+  padding: 0.4rem 1rem;
 }
-.produkt_loop #produktknap:hover {
+.produkt_loop #produktknap:hover,
+#tabs > button:hover {
   background-color: transparent;
-  border: solid 0.05rem orange;
+  border: solid 0.05rem #da5e18;
   border-radius: 2rem;
-  color: orange;
+  color: #da5e18;
   font-family: "Outfit", sans-serif;
   font-size: 0.7rem;
   font-weight: 300;
-  padding: 0.4rem;
+  padding: 0.4rem 1rem;
+}
+
+.produkt_loop .multi {
+  margin-bottom: -0.3rem;
+}
+
+#tabs {
+  margin-bottom: 0.3rem;
 }
 
 #produkt_hr {
@@ -260,7 +276,7 @@ body.page .main-navigation {
   background-image: url(https://emmaiguldbergsgade.dk/4sem_eksamen/ingrediens_hr.svg);
   left: 700px;
   position: relative;
-  animation: alternate-reverse produkt_hr 12s infinite;
+  animation: alternate-reverse produkt_hr 17s infinite;
   animation-timing-function: linear;
 }
 @keyframes produkt_hr {
@@ -276,7 +292,7 @@ body.page .main-navigation {
   #produkt_hr {
     margin-block: 0 2.5rem;
     left: 2000px;
-    animation-duration: 20s;
+    animation-duration: 35s;
   }
   @keyframes produkt_hr {
     from {
@@ -290,6 +306,17 @@ body.page .main-navigation {
   #allproducts {
     margin-inline: 0;
   }
+  .pris {
+    margin-block: 0;
+  }
+
+  .produkt_loop h2 {
+    margin: 0;
+  }
+
+  #produktside #allproducts .product_loop .indeholder {
+    margin-top: 0.5rem;
+  }
 
   .produkt_loop {
     display: grid;
@@ -299,7 +326,7 @@ body.page .main-navigation {
     justify-content: center;
   }
   .produkt_loop img {
-    grid-row: 1/5;
+    grid-row: 1/7;
     width: 75%;
     margin-right: auto;
     margin-left: auto;
@@ -307,6 +334,9 @@ body.page .main-navigation {
   .produkt_loop .indeholder {
     grid-column: 1/3;
     text-align: center;
+  }
+  .produkt_loop #produktknap {
+    grid-column: 2/3;
   }
 }
 
@@ -347,8 +377,8 @@ body.page .main-navigation {
 
 #igside #filtrering button:hover {
   background-color: transparent;
-  border: solid 0.05rem orange;
-  color: orange;
+  border: solid 0.05rem #da5e18;
+  color: #da5e18;
 }
 
 @media (min-width: 700px) {
@@ -389,8 +419,8 @@ body.page .main-navigation {
 }
 .event_loop #eventknap:hover {
   background-color: transparent;
-  border: solid 0.05rem orange;
-  color: orange;
+  border: solid 0.05rem #da5e18;
+  color: #da5e18;
 }
 
 #event_hr {
@@ -466,7 +496,7 @@ body.page .main-navigation {
 }
 
 #fside article p a:hover {
-  color: orange;
+  color: #da5e18;
 }
 
 /*STYLING OG OPSÆTNING AF FOOTER*/
@@ -486,11 +516,11 @@ body.page .main-navigation {
   color: black;
 }
 #colophon #footer-menu li:hover {
-  color: orange;
+  color: #da5e18;
   cursor: pointer;
 }
 .site-footer #footer-menu li a:hover {
-  color: orange;
+  color: #da5e18;
 }
 /*Styling af nyhedsbrev-knap*/
 #colophon #footer-knap {
@@ -506,8 +536,8 @@ body.page .main-navigation {
   margin: 0.5rem 1rem 0 1rem;
 }
 #colophon #footer-knap:hover {
-  border: solid 0.05rem orange;
-  color: orange;
+  border: solid 0.05rem #da5e18;
+  color: #da5e18;
 }
 /*placering af email og styling af placeholder*/
 #footer-email {
@@ -537,4 +567,9 @@ body.page .main-navigation {
   #colophon #footer-knap {
     grid-column: 3/4;
   }
+}
+
+/*Styling af tabs*/
+.hide {
+  display: none;
 }
