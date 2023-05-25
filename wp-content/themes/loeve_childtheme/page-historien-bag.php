@@ -18,7 +18,14 @@ get_header();
 			<article>
 				<img src="https://emmaiguldbergsgade.dk/4sem_eksamen/loeve-116.webp" alt="stine">
 				<h2>min vision</h2>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+				<p>Hej, jeg hedder Stine Hvilsted, og jeg står bag Loeve Botanical.<br>
+				Jeg startede brandet, da jeg selv har døjet med en sart og reaktiv hud, som ikke kunne tåle markedets gængse produkter. Jeg er uddannet i biologi og fysik/kemi, og har siden uddannet mig som kosmetolog, grundet min interesse for hudens opbygning. Det er skønt at kunne samle al min faglige viden, og bruge den til at kreere de bedste produkter til Loeve Botanical:<br>
+				Et hudplejebrand, hvor vi forsimpler hudplejerutinen med produkter, som styrker og opbygger din hud frem for at nedbryde den. Ved at bruge mine produkter, opdager du, hvordan hudplejerutinen kan gøres enkel og effektiv på samme tid!
+				Hvis du vil læse om produkternes <a href="https://emmaiguldbergsgade.dk/4sem_eksamen/loevebotanical/ingredienser/">ingredienser</a>, kan du finde mere information her på siden. Tilmeld dig også et <a href="https://emmaiguldbergsgade.dk/4sem_eksamen/loevebotanical/events/"> event</a>, hvor vi kan mødes, og jeg kan fortælle dig meget mere om Loeve Botanicals univers.<br><br>
+
+				Kærligste hilsner<br>
+				Stine
+				</p>
 			</article>
 			
 

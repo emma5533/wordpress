@@ -21,7 +21,7 @@ get_header();
 
 	<template class="event_template">
 		<article class="event_loop">
-			<div class="event_dato">
+			<div class="dag">
 			<h3 class="dato"></h3>
 			<h3 class="maaned"></h3>
 			</div>
