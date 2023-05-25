@@ -30,18 +30,18 @@ get_header();
 					<p class="multi"></p>
 					<div id="tabcontainer">
 						<div id="tabs">
-							<button class="tab">toner</button>
-							<button class="tab">mist</button>
-							<button class="tab">serum</button>
+							<button class="tab knap1"></button>
+							<button class="tab knap2"></button>
+							<button class="tab knap3"></button>
 						</div>
 							<div class="tabcontent hide" id="content-0">
-								<p>toneren tilbyder fugt til din rutine. </p>
+								<p id="mulighed1">toneren tilbyder fugt til din rutine. </p>
 							</div>
 							<div class="tabcontent hide" id="content-1">
-								<p>mist kan fugte ansigtet og give glød.</p>
+								<p id="mulighed2">mist kan fugte ansigtet og give glød.</p>
 							</div>
 							<div class="tabcontent hide" id="content-2">
-								<p>serum fornyer hudens energi.</p>
+								<p id="mulighed3">serum fornyer hudens energi.</p>
 							</div>
 					</div>
 					<button id="produktknap" type="button" >læg i kurv</button>
@@ -85,6 +85,12 @@ get_header();
 						clone.querySelector("img").src = produkt.produktbillede.guid;
 						clone.querySelector(".bsk").textContent = produkt.produktbsk;
 						clone.querySelector(".multi").textContent = produkt.title.rendered + " er multifunktionel. Brug den som:"
+						clone.querySelector(".knap1").textContent = produkt.funktion1;
+						clone.querySelector(".knap2").textContent = produkt.funktion2;
+						clone.querySelector(".knap3").textContent = produkt.funktion3;
+						clone.querySelector("#mulighed1").textContent = produkt.mulighed1;
+						clone.querySelector("#mulighed2").textContent = produkt.mulighed2;
+						clone.querySelector("#mulighed3").textContent = produkt.mulighed3;
 						clone.querySelector(".pris").textContent = produkt.pris + "kr.";
 						clone.querySelector(".indeholder").textContent = produkt.title.rendered + " indeholder:";
 					//Sætter klonerne ind i templatet når de er "udfyldt"
