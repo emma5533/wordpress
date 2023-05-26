@@ -13,17 +13,19 @@ Version: 1.2.2
   box-sizing: border-box;
 }
 body {
-  background-color: #f4efe6; /*bare rolig, havde bare ikke farvekoden*/
+  background-color: #f4efe6;
 }
+/*Sætter grid på hjemmesiden, så der er en automatisk margin i siderne på web*/
 main {
   display: grid;
   grid-template-columns: 1fr minmax(200px, 1000px) 1fr;
 }
+/*placerer alt indhold; artikler, i dette grid*/
 main article:not(#main #post-8 .frontpage .bred) {
   grid-column: 2/3;
 }
 
-/*TYPOGRAFIER*/
+/*********TYPOGRAFIER***********/
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 h1 {
@@ -44,6 +46,7 @@ h2 {
   font-weight: 500;
   margin: 0 0 0.3rem 0;
 }
+
 h3 {
   font-family: "Outfit", sans-serif;
   font-size: 0.8rem;
@@ -58,7 +61,7 @@ p {
   line-height: 0.9rem;
 }
 
-/*fjerner parents themes streg over h1 og h2*/
+/*fjerner parentthemes streg over h1 og h2*/
 h1:before,
 h2:before {
   display: none;
@@ -71,17 +74,13 @@ h2:before {
   display: none;
 }
 
-p {
-  font-family: "Outfit", sans-serif;
-}
-
 .site-footer #footer-menu {
   font-family: "Outfit", sans-serif;
   font-size: 0.7rem;
   font-weight: 300;
 }
 
-/*STYLING AF HEADER*/
+/**********STYLING AF HEADER**********/
 .site-header {
   padding: 1rem 0 1rem 0;
   position: fixed;
@@ -95,7 +94,6 @@ p {
   position: absolute;
   top: 10%;
 }
-
 .main-navigation .main-menu {
   display: flex;
   gap: 0.4rem;
@@ -114,11 +112,9 @@ p {
 }
 
 /*placering af headerens elementer i grid*/
-
 #masthead .site-branding-container {
   display: grid;
 }
-
 #masthead .site-branding-container .site-branding {
   display: grid;
   grid-template-columns: 20px repeat(3, 1fr) 20px;
@@ -135,11 +131,11 @@ p {
   right: 2vw;
   position: fixed;
 }
-
 body.page .main-navigation {
   grid-row: 2/3;
   grid-column: 2/3;
 }
+/*logo sættes i midten på tablet og web*/
 @media only screen and (min-width: 768px) {
   .site-logo {
     margin-right: auto;
@@ -148,8 +144,7 @@ body.page .main-navigation {
   }
 }
 
-/*STYLING AF FORSIDENS INDHOLD*/
-/*Styling til mobil*/
+/**************STYLING AF FORSIDENS INDHOLD************/
 #post-8 > .entry-header {
   display: none;
 }
@@ -186,11 +181,8 @@ body.page .main-navigation {
   color: #da5e18;
 }
 
-/*bredt billede, mislykket styling :(*/
-.frontpage .wp-block-image {
-  padding: 0;
-}
 /*mediaquery for forsiden*/
+/*placerer forsidens øverste tre elementer i et grid med klasser tildelt i wordpress*/
 @media (min-width: 782px) {
   .immortelle,
   .olie,
@@ -210,17 +202,17 @@ body.page .main-navigation {
   .manuka h3 {
     grid-column: 1/3;
   }
+  /*Dette sætter prisen og plus-knappen på linje*/
   .immortelle .forside_pris,
   .olie .forside_pris,
   .manuka .forside_pris {
     grid-column: 1/2;
   }
-
   .frontpage h3 {
     margin: 0;
   }
 }
-/*Mediaquery der overskriver parentthemes måde at sætte forsidens billeder på. nu alligner de*/
+/*Mediaquery der overskriver parentthemes måde at sætte forsidens billeder på. Nu alligner de*/
 @media only screen and (min-width: 768px) {
   .entry .entry-content,
   .entry .entry-summary {
@@ -239,16 +231,15 @@ body.page .main-navigation {
   }
 }
 
-/*STYLING AF PRODUKTSIDE*/
+/************STYLING AF PRODUKTSIDE**************/
 #produktside > h1 {
   grid-column: 2/3;
   text-align: center;
 }
-
 #produktside > h1::before {
   display: none;
 }
-
+/*placerer indhold i midten på mobil*/
 #allproducts {
   margin-inline: 5rem;
 }
@@ -256,7 +247,7 @@ body.page .main-navigation {
 .pris {
   margin-block: 0.3rem;
 }
-
+/*styler knapperne*/
 .produkt_loop #produktknap,
 #tabs > button {
   background-color: transparent;
@@ -287,13 +278,12 @@ body.page .main-navigation {
 #tabs {
   margin-bottom: 0.3rem;
 }
-
+/*animation for hr linje der kører henover skærmen*/
 #produkt_hr {
   display: block;
   width: 100vw;
   height: 20px;
   margin: 0.5rem 0 2.5rem -50vw;
-  /* left: 50%; */
   border: none;
   background-color: transparent;
   background-image: url(https://emmaiguldbergsgade.dk/4sem_eksamen/ingrediens_hr.svg);
@@ -311,6 +301,7 @@ body.page .main-navigation {
   }
 }
 /*mediaquery styling for produktside*/
+/*ændrer animationen bredde og tid så den varer længere på tablet og web*/
 @media (min-width: 700px) {
   #produkt_hr {
     margin-block: 0 2.5rem;
@@ -341,6 +332,7 @@ body.page .main-navigation {
     margin-top: 0.5rem;
   }
 
+  /*sætter produktloopets grid, og bestemmer hvad der placeres hvor i griddet*/
   .produkt_loop {
     display: grid;
     grid-template-columns: repeat(2, minmax(200px, 400px));
@@ -363,12 +355,12 @@ body.page .main-navigation {
   }
 }
 
-/*STYLING OG OPSÆTNING AF INGREDIENSSIDE*/
+/**********STYLING OG OPSÆTNING AF INGREDIENSSIDE************/
 #igside > h1 {
   grid-column: 2/3;
   text-align: center;
 }
-
+/*placerer ingredienserne i flex, så de rykker sig med skærmens bredde*/
 #allingredients {
   margin: 0 5rem 2rem 5rem;
   display: flex;
@@ -397,13 +389,12 @@ body.page .main-navigation {
   padding: 0.4rem 1rem;
   margin: 0;
 }
-
 #igside #filtrering button:hover {
   background-color: transparent;
   border: solid 0.05rem #da5e18;
   color: #da5e18;
 }
-
+/*sætter en størrelse på ingredienserne, så de kan passe i flex-griddet*/
 @media (min-width: 700px) {
   .ingrediens_loop {
     width: 280px;
@@ -413,7 +404,7 @@ body.page .main-navigation {
   }
 }
 
-/*STYLING OG OPSÆTNING AF EVENTSIDE*/
+/***************STYLING OG OPSÆTNING AF EVENTSIDE**************/
 #eventside > h1 {
   grid-column: 2/3;
   text-align: center;
@@ -426,7 +417,7 @@ body.page .main-navigation {
 .event_loop h2 {
   margin: 0;
 }
-
+/*styler tilmeld dig-knappen*/
 .event_loop #eventknap {
   background-color: transparent;
   border: solid 0.05rem black;
@@ -443,7 +434,7 @@ body.page .main-navigation {
   border: solid 0.05rem #da5e18;
   color: #da5e18;
 }
-
+/*styler hr linjer der skiller eventsene*/
 #event_hr {
   background-color: black;
   border: 0;
@@ -465,7 +456,6 @@ body.page .main-navigation {
     grid-template-rows: repeat(3, auto);
     gap: 0.5rem;
   }
-
   .event_loop img {
     grid-row: 1/4;
     grid-column: 2/3;
@@ -485,7 +475,8 @@ body.page .main-navigation {
     grid-column: 1/4;
   }
 }
-/*STYLING HISTORIEN BAG*/
+
+/************STYLING HISTORIEN BAG**************/
 #hsside > h1 {
   grid-column: 2/3;
   text-align: center;
@@ -493,17 +484,16 @@ body.page .main-navigation {
 #hsside article {
   margin: 0 5rem 2rem 5rem;
 }
-
+/*styler links på siden*/
 #hsside p a {
   color: black;
   text-decoration: underline;
 }
-
 #hsside p a:hover {
   color: #da5e18;
   cursor: pointer;
 }
-
+/*stylign for tablet og web*/
 @media (min-width: 700px) {
   #hsside article {
     display: grid;
@@ -516,7 +506,8 @@ body.page .main-navigation {
     grid-row: 1/4;
   }
 }
-/*STYLING AF FORHANDLERE SIDEN*/
+
+/**********STYLING AF FORHANDLERE SIDEN************/
 #fside > h1 {
   grid-column: 2/3;
   text-align: center;
@@ -525,23 +516,25 @@ body.page .main-navigation {
   margin: 0 5rem 2rem 5rem;
 }
 
+/*styler links*/
 #fside article p a {
   color: black;
   text-decoration: underline;
 }
-
 #fside article p a:hover {
   color: #da5e18;
   cursor: pointer;
 }
 
-/*STYLING OG OPSÆTNING AF FOOTER*/
+/****************STYLING OG OPSÆTNING AF FOOTER**************/
+/*footeren kaldes colophon i wordpress. dette sætter den i grid med 5 kolonner*/
 #colophon {
   display: grid;
   grid-template-columns: 1rem repeat(3, 1fr) 1rem;
   grid-template-rows: auto auto 2.5rem;
   margin: 0 0 1rem 0;
 }
+/*placerer teksten i en kolonne hvor teksten står over hinanden*/
 .site-footer #footer-menu {
   list-style: none;
   font-size: 0.7rem;
@@ -558,6 +551,7 @@ body.page .main-navigation {
 .site-footer #footer-menu li a:hover {
   color: #da5e18;
 }
+
 /*Styling af nyhedsbrev-knap*/
 #colophon #footer-knap {
   background-color: transparent;
@@ -591,7 +585,9 @@ body.page .main-navigation {
   font-family: "Outfit", sans-serif;
   font-weight: 300;
 }
+
 /*mediaquery, som gør footeren responsiv*/
+/*Sættes i flex i stedet for grid, for at det lægger sig ved siden af hinanden på tablet og web*/
 @media only screen and (min-width: 768px) {
   .site-footer #footer-menu {
     display: flex;
@@ -605,7 +601,7 @@ body.page .main-navigation {
   }
 }
 
-/*Styling af tabs*/
+/*Styling af tabs på produktside*/
 .hide {
   display: none;
 }
